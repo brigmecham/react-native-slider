@@ -103,6 +103,10 @@ declare module '@miblanchard/react-native-slider' {
      * Initial value of the slider. The value should be a number or array of numbers between minimumValue and maximumValue, which default to `0` and `1` respectively. Default value is `0`. This is not a controlled component, e.g. if you don't update the value, the component won't be reset to its inital value.
      */
     value?: number | number[];
+    /**
+     * Custom component used for the track to the left of the button.
+    */
+    customMinimumTrack?: object,
   }
 
   export class Slider extends PureComponent<ISliderProps> {}
