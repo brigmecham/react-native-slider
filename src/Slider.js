@@ -485,6 +485,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
             thumbTintColor,
             thumbTouchSize,
             trackStyle,
+            customMinimumTrack,
             ...other
         } = this.props;
         const {allMeasured, containerSize, thumbSize, values} = this.state;
@@ -580,7 +581,9 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
                             trackStyle,
                             minimumTrackStyle,
                         ]}
-                    />
+                    >
+                        {customMinimumTrack}
+                    </Animated.View>
                     {interpolatedThumbValues.map((value, i) => (
                         <Animated.View
                             renderToHardwareTextureAndroid
